@@ -10,6 +10,13 @@ let content = {
         'Hi I\'m Glade, A freelance front end developer.',
         'I have experience on projects small and large across a series of capacities.'
       ],
+      workLink: {
+        type: 'a',
+        text: 'View work',
+        attributes: {
+          href: '/#/work'
+        }
+      },
       links: [
         {
           text: 'Github',

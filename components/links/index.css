@@ -1,14 +1,58 @@
-[data-component='links']{
+@keyframes linksFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes linksScaleIn {
+  from {
+    transform: scale(0);
+  }
+}
+
+[data-component='links'] {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-direction: row;
   & > li {
     display: flex;
+    &:not(:first-child):not(:last-child) {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    &:nth-child(1) > a {
+      animation-delay: 1s;
+    }
+    &:nth-child(2) > a {
+      animation-delay: 1.25s;
+    }
+    &:nth-child(3) > a {
+      animation-delay: 1.5s;
+    }
     & > a {
+      animation-name: linksFadeIn, linksScaleIn;
+      animation-duration: .2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: backwards;
+      transform-origin: bottom left;
+      padding: 1em;
+      border-radius: .25em;
+      background-color: #507282;
+      transition: background-color .5s ease-in-out;
+      &:focus {
+        outline: 0;
+      }
+      &:hover,
+      &:focus {
+        background-color: color(#507282 tint(75%));
+      }
       & svg {
         display: block;
         width: 2em;
         height: 2em;
-        color: white;
+        color: #222;
         fill: currentColor;
       }
     }

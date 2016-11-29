@@ -1,0 +1,23 @@
+[data-component='button'] {
+  display: block;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  padding: 1.25em 3em;
+  border-radius: .25em;
+  background: #b25538;
+  color: white;
+  transition: background-color .3s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  overflow: visible;
+  &:hover,
+  &:focus {
+    background-color: #71535c;
+  }
+}

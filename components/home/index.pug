@@ -1,4 +1,5 @@
 include ../links/index
+include ../button/index
 
 mixin home(props)
   section(data-component='home')
@@ -14,4 +15,6 @@ mixin home(props)
         h1!=props.title
         each t in props.text
           p!=t
+      .view-work
+        +button(props.workLink)
       +links(props.links)

@@ -1,0 +1,56 @@
+@import '../button/';
+
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes homeScaleIn {
+  from {
+    transform: scale(0);
+  }
+}
+
+@keyframes homeDownIn {
+  from {
+    transform: translateY(-5%);
+  }
+}
+
+[data-component='contact'] {
+  background-color: #222;
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    & > div {
+      display: flex;
+    }
+  }
+  & h2 {
+    font-family: Sumana, serif;
+    color: white;
+    font-size: 2.26em;
+    line-height: 1.1em;
+    margin: 0 0 1em;
+    text-align: center;
+    max-width: 24em;
+  }
+  & .content {
+    margin-bottom: 1.2em;
+    flex-direction: column;
+    justify-content: center;
+    animation-duration: 1s;
+    animation-name: homeFadeIn, homeDownIn;
+    animation-iteration-count: 1;
+    animation-delay: .8s;
+    animation-fill-mode: backwards;
+    & > p {
+      margin: 0 0 1em;
+      text-align: center;
+    }
+  }
+}
