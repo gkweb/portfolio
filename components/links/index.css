@@ -1,0 +1,16 @@
+[data-component='links']{
+  display: flex;
+  flex-direction: row;
+  & > li {
+    display: flex;
+    & > a {
+      & svg {
+        display: block;
+        width: 2em;
+        height: 2em;
+        color: white;
+        fill: currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+mixin links(props)
+  ul.links(data-component='links')
+    each link, index in props
+      li
+        a(href=link.url, title!=link.text)
+          svg
+            use(xlink:href=link.iconUrl)

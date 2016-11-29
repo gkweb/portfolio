@@ -1,0 +1,17 @@
+include ../links/index
+
+mixin home(props)
+  section(data-component='home')
+    .wrapper
+      .logo
+        .front-logo
+          svg
+            use(xlink:href=props.logo.url)
+        .back-logo
+          svg
+            use(xlink:href=props.logo.url)
+      .content
+        h1!=props.title
+        each t in props.text
+          p!=t
+      +links(props.links)

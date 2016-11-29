@@ -1,0 +1,86 @@
+@import '../links/';
+
+@keyframes homeRotateIt {
+  from {
+    transform: rotateY(720deg) rotateZ(360deg) scale(0);
+  }
+}
+
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes homeScaleIn {
+  from {
+    transform: scale(0);
+  }
+}
+
+@keyframes homeDownIn {
+  from {
+    transform: translateY(-5%);
+  }
+}
+
+[data-component='home'] {
+  background-color: #222;
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    & > div {
+      display: flex;
+    }
+  }
+  & h1 {
+    font-family: Sumana, serif;
+    color: white;
+    font-size: 2.26em;
+    line-height: 1.1em;
+    margin: 0 0 1em;
+    text-align: center;
+    max-width: 24em;
+  }
+  & .content {
+    flex-direction: column;
+    justify-content: center;
+    animation-duration: 1s;
+    animation-name: homeFadeIn, homeDownIn;
+    animation-iteration-count: 1;
+    animation-delay: .8s;
+    animation-fill-mode: backwards;
+    & > p {
+      margin: 0 0 1em;
+      text-align: center;
+    }
+  }
+  & .logo {
+    position: relative;
+    height: 10em;
+    padding-top: 1em;
+    box-sizing: border-box;
+    width: 18.75em;
+    perspective-origin: 150% 150%;
+    perspective: 100em;
+    transform-style: preserve-3d;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: homeRotateIt, homeFadeIn;
+    margin-bottom: 1.5em;
+    & .front-logo {
+      text-align: center;
+      transform: translateZ(-1px) perspective(0);
+    }
+    & .back-logo {
+      transform: translateZ(0) perspective(0);
+    }
+    & > div {
+      position: absolute;
+    }
+  }
+}
