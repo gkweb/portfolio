@@ -3,6 +3,9 @@ include ../button/index
 
 mixin home(props)
   section(data-component='home')
+    .inner-bg
+      .layer.bg-1(style!=`background-image: url(${props.bg[0].url})`)
+      .layer.bg-2(style!=`background-image: url(${props.bg[1].url})`)
     .wrapper
       .logo
         .front-logo
@@ -15,6 +18,6 @@ mixin home(props)
         h1!=props.title
         each t in props.text
           p!=t
-      .view-work
-        +button(props.workLink)
+      //- .view-work
+      //-   +button(props.workLink)
       +links(props.links)

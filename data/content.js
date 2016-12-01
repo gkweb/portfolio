@@ -1,11 +1,36 @@
 let content = {
   props: {
     title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
+    navigation: {
+      title: 'Some brap',
+      links: [
+        {
+          text: 'Work',
+          url: '#/work'
+        },
+        {
+          text: 'Other',
+          url: '#/work'
+        },
+        {
+          text: 'Contact',
+          url: '#/contact'
+        }
+      ]
+    },
     home: {
       title: 'Glade Kettle, Front end Developer based in Melbourne, Australia',
       logo: {
         url: '/content/symbols.svg#icon-logo'
       },
+      bg: [
+        {
+          url: '/content/images/melbourne_collins_street.jpg'
+        },
+        {
+          url: '/content/images/melbourne_collins_street_blur4.jpg'
+        }
+      ],
       text: [
         'Hi I\'m Glade, A freelance front end developer.',
         'I have experience on projects small and large across a series of capacities.'

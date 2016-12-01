@@ -1,0 +1,7 @@
+mixin navigation(props)
+  aside(data-component='navigation')
+    .wrapper
+      ul
+        each link in props.links
+          li
+            a(href=link.url)!=link.text
