@@ -1,6 +1,13 @@
 @import '../home/';
 @import '../navigation/';
 
+.app-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+
 html {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;

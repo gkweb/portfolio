@@ -5,16 +5,22 @@ let content = {
       title: 'Some brap',
       links: [
         {
-          text: 'Work',
-          url: '#/work'
+          text: 'Home',
+          id: 'home',
+          url: '#/home',
+          iconUrl: '/content/symbols.svg#icon-home'
         },
         {
-          text: 'Other',
-          url: '#/work'
+          text: 'Work',
+          id: 'work',
+          url: '#/work',
+          iconUrl: '/content/symbols.svg#icon-briefcase'
         },
         {
           text: 'Contact',
-          url: '#/contact'
+          id: 'contact',
+          url: '#/contact',
+          iconUrl: '/content/symbols.svg#icon-envelope-o'
         }
       ]
     },
@@ -56,7 +62,7 @@ let content = {
         {
           text: 'Email',
           url: '/#/contact',
-          iconUrl: '/content/symbols.svg#icon-mail'
+          iconUrl: '/content/symbols.svg#icon-envelope-o'
         }
       ]
     }

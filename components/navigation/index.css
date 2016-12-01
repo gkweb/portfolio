@@ -1,26 +1,82 @@
+@keyframes navWidthIn {
+  from {
+    transform: scale(0);
+  }
+}
+
 [data-component='navigation'] {
   display: flex;
-  flex-direction: row;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 3em;
+  overflow: visible;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #333;
+  & * {
+    box-sizing: border-box;
+  }
   & ul {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    width: 3em;
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
     & li {
       display: flex;
+      justify-content: flex-end;
+      max-height: 3em;
     }
     & a {
-      display: block;
-      padding: .5em 1em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
       color: white;
       background-color: #507282;
       font-weight: bold;
       text-decoration: none;
+      max-width: 3em;
+      transition: max-width .5s ease;
+      & span {
+        display: flex;
+        padding: .5em;
+        min-width: 3em;
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+      & .txt {
+        overflow: hidden;
+      }
+      &:focus,
+      &:hover {
+        max-width: 20em;
+      }
+      &.work .icon > svg,
+      &.contact .icon > svg {
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0 auto;
+      }
+      & .icon {
+        & svg {
+          display: block;
+          fill: currentColor;
+          width: 2em;
+          height: 2em;
+        }
+      }
     }
   }
 }

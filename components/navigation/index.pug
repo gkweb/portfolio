@@ -4,4 +4,8 @@ mixin navigation(props)
       ul
         each link in props.links
           li
-            a(href=link.url)!=link.text
+            a(href=link.url, class=link.id)
+              span.icon
+                svg
+                  use(xlink:href=link.iconUrl)
+              span.txt!=link.text
