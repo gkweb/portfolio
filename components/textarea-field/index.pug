@@ -1,0 +1,6 @@
+include ../label/index
+
+mixin textareaField(props)
+  div(data-component='textarea-field')
+    +label(props.label)
+    textarea.input-control(id=props.id)&attributes(props.attributes)

@@ -1,8 +1,21 @@
 include ../button/index
+include ../input-field/index
+include ../textarea-field/index
+include ../spacer/index
 
 mixin contact(props)
   section(data-component='contact')
     .wrapper
-      
-      .submit
-        +button(props.workLink)
+      h2!=props.title
+      +spacer()
+      form
+        each field in props.fields
+          case field.attributes.type
+            when 'email'
+            when 'text'
+              +inputField(field)
+            when 'textarea'
+              +textareaField(field)
+            when 'submit'
+              .submit
+                +button(field)

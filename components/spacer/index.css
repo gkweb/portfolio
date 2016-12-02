@@ -1,0 +1,6 @@
+[data-component='spacer'] {
+  width: 100%;
+  max-width: 5em;
+  margin: 2em auto;
+  border: 1px solid rgba(255, 255, 255, .5);
+}

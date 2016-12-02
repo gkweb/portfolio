@@ -1,5 +1,6 @@
 include ../navigation/index
 include ../home/index
+include ../contact/index
 
 doctype html
 html
@@ -19,4 +20,5 @@ html
     link(href='https://fonts.googleapis.com/css?family=Open+Sans|Sumana', rel='stylesheet')
   body
     +home(props.home)
+    +contact(props.contact)
     +navigation(props.navigation)

@@ -1,3 +1,6 @@
+include ../label/index
+
 mixin inputField(props)
   div(data-component='input-field')
+    +label(props.label)
     input.input-control&attributes(props.attributes)

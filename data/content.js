@@ -71,6 +71,67 @@ let content = {
           iconUrl: '/content/symbols.svg#icon-envelope-o'
         }
       ]
+    },
+    contact: {
+      title: 'Contact me',
+      fields: [
+        {
+          type: 'text',
+          id: 'email',
+          label: 'Name',
+          attributes: {
+            type: 'email',
+            placeholder: 'Name..',
+            required: 'required',
+            maxlength: 100,
+            minlength: 2
+          }
+        },
+        {
+          type: 'email',
+          id: 'name',
+          label: 'Email',
+          attributes: {
+            type: 'email',
+            placeholder: 'Email..',
+            required: 'required',
+            maxlength: 100,
+            minlength: 2
+          }
+        },
+        {
+          type: 'text',
+          id: 'challenge',
+          label: 'Challenge',
+          attributes: {
+            type: 'email',
+            placeholder: '100 - 87 =',
+            required: 'required',
+            maxlength: 2,
+            minlength: 2
+          }
+        },
+        {
+          type: 'textarea',
+          id: 'name',
+          label: 'Message',
+          attributes: {
+            type: 'textarea',
+            placeholder: 'Your message..',
+            required: 'required',
+            maxlength: 100,
+            minlength: 2
+          }
+        },
+        {
+          type: 'button',
+          id: 'name',
+          text: 'Submit',
+          attributes: {
+            type: 'submit'
+          }
+        }
+      ]
     }
   }
 }

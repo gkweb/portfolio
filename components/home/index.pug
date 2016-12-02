@@ -1,5 +1,6 @@
 include ../links/index
 include ../button/index
+include ../spacer/index
 
 mixin home(props)
   section(data-component='home')
@@ -16,6 +17,7 @@ mixin home(props)
             use(xlink:href=props.logo.url)
       .content
         h1!=props.title
+        +spacer()
         each t in props.text
           p!=t
       //- .view-work

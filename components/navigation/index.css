@@ -154,6 +154,9 @@
       & .txt {
         overflow: hidden;
       }
+      &:focus {
+        outline: 0;
+      }
       &:focus,
       &:hover {
         max-width: 20em;
