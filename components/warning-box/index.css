@@ -1,0 +1,5 @@
+[data-component='warning-box'] {
+  & h4 {
+    margin: 0;
+  }
+}

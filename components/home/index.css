@@ -43,6 +43,7 @@
 
 section[data-component='home'] {
   display: flex;
+  box-sizing: border-box;
   background-color: #222;
   position: relative;
   flex-basis: 95%;
@@ -51,6 +52,9 @@ section[data-component='home'] {
   /* Font size change for desktop */
   @media (--home-small-breakpoint) {
     font-size: 1em;
+  }
+  & * {
+    box-sizing: border-box;
   }
   & .inner-bg {
     position: absolute;
@@ -95,7 +99,7 @@ section[data-component='home'] {
   & .wrapper {
     display: flex;
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 2em 1em;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,7 @@
+mixin warningBox(props)
+  figure(data-component='warning-box')&attributes(props.attributes)
+    h4!= props.title
+    span.icon
+      svg
+        use(xlink:href=props.iconUrl)
+    span.txt!= props.text

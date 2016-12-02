@@ -74,13 +74,19 @@ let content = {
     },
     contact: {
       title: 'Contact me',
+      warningBox: {
+        title: 'Recruiters beware',
+        text: 'I\'m not interested in banner ad or EDM work.',
+        iconUrl: '/content/symbols.svg#icon-exclamation'
+      },
       fields: [
         {
           type: 'text',
-          id: 'email',
+          id: 'name',
           label: 'Name',
           attributes: {
-            type: 'email',
+            type: 'text',
+            title: 'Name',
             placeholder: 'Name..',
             required: 'required',
             maxlength: 100,
@@ -93,6 +99,7 @@ let content = {
           label: 'Email',
           attributes: {
             type: 'email',
+            title: 'Email',
             placeholder: 'Email..',
             required: 'required',
             maxlength: 100,
@@ -104,7 +111,8 @@ let content = {
           id: 'challenge',
           label: 'Challenge',
           attributes: {
-            type: 'email',
+            type: 'text',
+            title: '100 - 87',
             placeholder: '100 - 87 =',
             required: 'required',
             maxlength: 2,
