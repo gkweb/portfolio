@@ -1,5 +1,10 @@
 mixin navigation(props)
   aside(data-component='navigation')
+    button.navigation-toggle
+      svg.open-icon
+        use(xlink:href=props.button.icon[0].url)
+      svg.close-icon
+        use(xlink:href=props.button.icon[1].url)
     .wrapper
       ul
         each link in props.links

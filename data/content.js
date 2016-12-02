@@ -3,6 +3,12 @@ let content = {
     title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
     navigation: {
       title: 'Some brap',
+      button: {
+        icon: [
+          {url: '/content/symbols.svg#icon-menu'},
+          {url: '/content/symbols.svg#icon-close'}
+        ]
+      },
       links: [
         {
           text: 'Home',

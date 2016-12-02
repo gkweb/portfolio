@@ -15,6 +15,12 @@
   }
 }
 
+@keyframes homeFadeInHalf {
+  from {
+    opacity: .5;
+  }
+}
+
 @keyframes homeSatellite {
   from {
     transform: rotate(-360deg) translate(300%) rotate(-360deg);
@@ -38,6 +44,10 @@
   background-color: #222;
   position: relative;
   flex-basis: 95%;
+  font-size: .75em;
+  @media (--home-small-breakpoint-1) {
+    font-size: 1em;
+  }
   & .inner-bg {
     position: absolute;
     top: 0;
@@ -59,10 +69,10 @@
       }
       &.bg-2 {
         opacity: 1;
-        animation: homeFadeIn 1s ease 1;
+        animation: homeFadeInHalf 1s ease 1;
         animation-delay: 1s;
         animation-fill-mode: both;
-        &:before {
+        &::before {
           display: block;
           content: ' ';
           position: absolute;
@@ -109,6 +119,7 @@
     animation-fill-mode: backwards;
     & > p {
       margin: 0 0 1em;
+      line-height: 1.2em;
       text-align: center;
     }
   }
@@ -134,6 +145,10 @@
     animation-iteration-count: 1;
     animation-name: homeRotateIt, homeFadeIn;
     margin-bottom: 1.5em;
+    & svg {
+      height: 10em;
+      width: 18.75em;
+    }
     & .front-logo {
       text-align: center;
       transform: translateZ(-1px) perspective(0);
