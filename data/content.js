@@ -140,6 +140,38 @@ let content = {
           }
         }
       ]
+    },
+    work: {
+      title: 'Work',
+      items: [
+        {
+          title: 'Grampians online',
+          url: '#',
+          media: [
+            {
+              type: 'img',
+              attributes: {
+                alt: 'some alt',
+                src: 'https://www.fillmurray.com/g/500/600'
+              }
+            }
+          ],
+          tags: [
+            {
+              text: 'ES6'
+            },
+            {
+              text: 'Javascript'
+            },
+            {
+              text: 'GIT'
+            },
+            {
+              text: 'CSS'
+            }
+          ]
+        }
+      ]
     }
   }
 }

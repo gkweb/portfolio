@@ -1,17 +1,15 @@
 @import '../button/';
-@import '../input-field/';
-@import '../textarea-field/';
-@import '../warning-box/';
 @import '../spacer/';
+@import '../work-item/';
 
-@custom-media --home-small-breakpoint-1024 (width >= 64em);
+@custom-media --work-small-breakpoint-1024 (width >= 64em);
 
-[data-component='contact'] {
+[data-component='work'] {
   box-sizing: border-box;
   background: linear-gradient(bottom, #444, #222);
   font-size: .75em;
-  padding: 2em 0;
-  @media (--home-small-breakpoint-1024) {
+  padding: 4em 0;
+  @media (--work-small-breakpoint-1024) {
     font-size: 1em;
   }
   & * {
@@ -28,20 +26,9 @@
     flex-grow: 0;
     max-width: 75%;
     align-items: center;
-    min-height: 100vh;
-    @media (--home-small-breakpoint-1024) {
+    @media (--work-small-breakpoint-1024) {
       max-width: 50%;
     }
-  }
-  & form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  & .submit {
-    display: flex;
-    margin-left: auto;
   }
   & h2 {
     font-family: Sumana, serif;

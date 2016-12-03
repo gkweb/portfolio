@@ -1,0 +1,60 @@
+@import '../button/';
+@import '../spacer/';
+
+@custom-media --work-item-small-breakpoint-1024 (width >= 64em);
+
+[data-component='work-item'] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  & .example {
+    position: relative;
+    border-top: 1.5em solid #777;
+    border-bottom: .5em solid #777;
+    border-radius: .25em;
+    box-shadow: .125em .125em .5em rgba(0, 0, 0, .5);
+    margin-bottom: 1em;
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      height: .5em;
+      width: .5em;
+      top: -1em;
+      left: .5em;
+      box-shadow: 1em 0 #555, 2em 0 #555;
+      border-radius: 50%;
+      background-color: #555;
+    }
+    & img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  & h4 {
+    font-size: 1em;
+    margin: 0 0 1em;
+    color: #ccc;
+  }
+  & .tag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  & .tag {
+    font-size: .75em;
+    background-color: #71535c;
+    color: #ccc;
+    border-radius: .125em;
+    padding: .5em 1em;
+    box-shadow: .125em .125em .125em rgba(0, 0, 0, .5);
+    &:not(:last-child) {
+      margin-right: .25em;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+include ../button/index
+include ../work-item/index
+include ../spacer/index
+
+mixin work(props)
+  section(data-component='work')
+    .wrapper
+      h2!=props.title
+      +spacer()
+      each item in props.items
+        +workItem(item)

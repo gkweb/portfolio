@@ -138,7 +138,7 @@
       @media (--navigation-breakpoint-1) {
         background-color: #507282;
         max-width: 3em;
-        transition: max-width .7s ease-in-out;
+        transition: max-width .7s ease-in-out, box-shadow .7s ease-in-out;
       }
       & span {
         display: flex;
@@ -160,6 +160,7 @@
       &:focus,
       &:hover {
         max-width: 20em;
+        box-shadow: .125em .125em .5em rgba(0, 0, 0, .3);
       }
       &.work .icon > svg,
       &.contact .icon > svg {

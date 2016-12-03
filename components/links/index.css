@@ -40,9 +40,11 @@
       padding: 1em;
       border-radius: .25em;
       background-color: #507282;
-      transition: background-color .5s ease-in-out;
+      transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+      box-shadow: .125em .125em .5em rgba(0, 0, 0, .3);
       &:focus {
         outline: 0;
+        box-shadow: 0 0 0 rgba(0, 0, 0, .3);
       }
       &:hover,
       &:focus {

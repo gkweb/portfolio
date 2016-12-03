@@ -1,0 +1,11 @@
+mixin workItem(props)
+  article(data-component='work-item')
+    .example
+      each m in props.media
+        #{m.type}&attributes(m.attributes)
+    footer
+      h4!='Technologies used:'
+      ul.tag-list
+        each t in props.tags
+          li.tag
+            span!=t.text

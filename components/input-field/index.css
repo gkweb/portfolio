@@ -15,12 +15,16 @@
     padding: 1em;
     border: 1px solid #222;
     border-radius: .25em;
-    background: #333;
+    background: transparent;
     color: white;
     transition: border-color .3s ease;
     &:focus {
       outline: 0;
       border-color: #507282;
+    }
+    &:invalid {
+      outline: 0;
+      box-shadow: none;
     }
   }
 }
