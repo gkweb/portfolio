@@ -76,6 +76,7 @@ section[data-component='home'] {
       overflow: hidden;
       &.bg-1 {
         filter: blur(.25em) grayscale(100%);
+        will-change: filter;
       }
       &.bg-2 {
         opacity: 1;

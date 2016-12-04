@@ -13,13 +13,13 @@ const content = require('./data/content')
 // https://github.com/RGBboy/express-mailer
 mailer.extend(app, {
   from: 'no-reply@gladekettle.com.au',
-  host: process.env.SMPT_HOST, // hostname process.env.DB_HOST,
+  host: process.env.SMTP_HOST, // hostname process.env.DB_HOST,
   secureConnection: true, // use SSL
   port: 465, // port for secure SMTP
   transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
   auth: {
-    user: process.env.SMPT_USER,
-    pass: process.env.SMPT_PASSWORD
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD
   }
 })
 
@@ -77,7 +77,6 @@ app.get('/mail', function (req, res) {
 // Contact form posts
 app.post('/contact', function (req, res) {
   console.log(req.body)
-  console.log(!req.body)
 
   // Check name
   req.checkBody('name', 'Name is a required field').isAlpha()
@@ -92,7 +91,6 @@ app.post('/contact', function (req, res) {
   // when using generators e.g. with co-express
   req.getValidationResult().then(function (result) {
     if (!result.isEmpty()) {
-
       let r = {
         success: false,
         message: 'Error submitting form :(, Please check that all fields are valid.',
