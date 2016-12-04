@@ -3,7 +3,7 @@ include ../button/index
 include ../spacer/index
 
 mixin home(props)
-  section(data-component='home')
+  section#home(data-component='home')
     .inner-bg
       .layer.bg-1(style!=`background-image: url(${props.bg[0].url})`)
       .layer.bg-2(style!=`background-image: url(${props.bg[1].url})`)

@@ -13,19 +13,19 @@ let content = {
         {
           text: 'Home',
           id: 'home',
-          url: '#/home',
+          url: '#home',
           iconUrl: '/content/symbols.svg#icon-home'
         },
         {
           text: 'Work',
           id: 'work',
-          url: '#/work',
+          url: '#work',
           iconUrl: '/content/symbols.svg#icon-briefcase'
         },
         {
           text: 'Contact',
           id: 'contact',
-          url: '#/contact',
+          url: '#contact',
           iconUrl: '/content/symbols.svg#icon-envelope-o'
         }
       ]
@@ -51,7 +51,7 @@ let content = {
         type: 'a',
         text: 'View work',
         attributes: {
-          href: '/#/work'
+          href: '#work'
         }
       },
       links: [
@@ -66,8 +66,8 @@ let content = {
           iconUrl: '/content/symbols.svg#icon-linkedin'
         },
         {
-          text: 'Email',
-          url: '/#/contact',
+          text: 'Contact',
+          url: '#contact',
           iconUrl: '/content/symbols.svg#icon-envelope-o'
         }
       ]
@@ -87,6 +87,7 @@ let content = {
           attributes: {
             type: 'text',
             title: 'Name',
+            name: 'name',
             placeholder: 'Name..',
             required: 'required',
             maxlength: 100,
@@ -100,6 +101,7 @@ let content = {
           attributes: {
             type: 'email',
             title: 'Email',
+            name: 'email',
             placeholder: 'Email..',
             required: 'required',
             maxlength: 100,
@@ -113,6 +115,7 @@ let content = {
           attributes: {
             type: 'text',
             title: '100 - 87',
+            name: 'challenge',
             placeholder: '100 - 87 =',
             required: 'required',
             maxlength: 2,
@@ -121,11 +124,12 @@ let content = {
         },
         {
           type: 'textarea',
-          id: 'name',
+          id: 'message',
           label: 'Message',
           attributes: {
             type: 'textarea',
             placeholder: 'Your message..',
+            name: 'message',
             required: 'required',
             maxlength: 100,
             minlength: 2
@@ -133,7 +137,7 @@ let content = {
         },
         {
           type: 'button',
-          id: 'name',
+          id: 'submit',
           text: 'Submit',
           attributes: {
             type: 'submit'

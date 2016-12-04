@@ -4,6 +4,12 @@
 @import '../warning-box/';
 @import '../spacer/';
 
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
 @custom-media --home-small-breakpoint-1024 (width >= 64em);
 
 [data-component='contact'] {
@@ -42,6 +48,20 @@
   & .submit {
     display: flex;
     margin-left: auto;
+  }
+  & .flash {
+    animation-fill-mode: backwards;
+    animation: contactFadeIn .5s ease 1;
+    transition: display .1s linear;
+    transition-delay: .5s;
+    &.hidden {
+      animation: contactFadeIn .5s ease 1 reverse;
+      display: none;
+    }
+    & h3 {
+      margin-top: 0;
+      line-height: 1.3em;
+    }
   }
   & h2 {
     font-family: Sumana, serif;

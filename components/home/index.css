@@ -107,6 +107,9 @@ section[data-component='home'] {
     transition: min-height 999s ease;
     position: relative;
     z-index: 3;
+    @media (--home-small-breakpoint) {
+      transition: none;
+    }
     & > div {
       display: flex;
     }

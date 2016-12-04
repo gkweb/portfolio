@@ -5,11 +5,12 @@ include ../warning-box/index
 include ../spacer/index
 
 mixin contact(props)
-  section(data-component='contact')
+  section#contact(data-component='contact')
     .wrapper
       h2!=props.title
       +spacer()
-      form
+      figure.flash.hidden
+      form(method='post', action='/contact', name='contact')
         each field in props.fields
           case field.attributes.type
             when 'email'
