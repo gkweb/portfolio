@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path')
 const util = require('util')
 const bodyParser = require('body-parser')
@@ -5,7 +6,22 @@ const express = require('express')
 const RateLimit = require('express-rate-limit')
 const expressValidator = require('express-validator')
 const app = express()
+const mailer = require('express-mailer')
 const content = require('./data/content')
+
+// Express Mailer setup
+// https://github.com/RGBboy/express-mailer
+mailer.extend(app, {
+  from: 'no-reply@gladekettle.com.au',
+  host: process.env.SMPT_HOST, // hostname process.env.DB_HOST,
+  secureConnection: true, // use SSL
+  port: 465, // port for secure SMTP
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts
+  auth: {
+    user: process.env.SMPT_USER,
+    pass: process.env.SMPT_PASSWORD
+  }
+})
 
 // Set contact form rate limit -- To avoid those robots
 let limiter = new RateLimit({
@@ -39,6 +55,23 @@ app.use('/content', express.static(path.join(__dirname, 'content')))
 // One page app
 app.get('/', function (req, res) {
   res.render('app/index', content)
+})
+
+// One page app
+app.get('/mail', function (req, res) {
+  app.mailer.send('email', {
+    to: 'gladekettle@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.
+    subject: 'Test Email', // REQUIRED.
+    otherProperty: 'Other Property' // All additional properties are also passed to the template as local variables.
+  }, function (err) {
+    if (err) {
+      // handle error
+      console.log(err)
+      res.send('There was an error sending the email')
+      return
+    }
+    res.send('Email Sent')
+  })
 })
 
 // Contact form posts
