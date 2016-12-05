@@ -18,7 +18,8 @@ html
     link(rel="apple-touch-icon" href="/content/apple-touch-icon.png")
     script(src='/bundle/bundle.js')
     link(href='/bundle/bundle.css', rel='stylesheet', type='text/css')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans|Sumana', rel='stylesheet')
+    each l in props.externalLinks
+      link&attributes(l.attributes)
   body
     +navigation(props.navigation)
     +home(props.home)

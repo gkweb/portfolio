@@ -1,6 +1,12 @@
 let content = {
   props: {
     title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
+    externalLinks: {
+      attributes: {
+        href:'https://fonts.googleapis.com/css?family=Open+Sans|Sumana',
+        rel: 'stylesheet'
+      }
+    },
     navigation: {
       title: 'Some brap',
       button: {
