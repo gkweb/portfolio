@@ -1,12 +1,14 @@
 let content = {
   props: {
     title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
-    externalLinks: {
+    externalLinks: [
+      {
       attributes: {
         href: 'https://fonts.googleapis.com/css?family=Open+Sans|Sumana',
         rel: 'stylesheet'
+        }
       }
-    },
+    ],
     navigation: {
       title: 'Some brap',
       button: {
@@ -43,7 +45,7 @@ let content = {
       },
       bg: [
         {
-          url: '/content/images/melbourne_collins_street.jpg'
+          url: '/content/images/melbourne_collins_street_v2.jpg'
         },
         {
           url: '/content/images/melbourne_collins_street_blur4.jpg'

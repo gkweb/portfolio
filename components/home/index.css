@@ -74,10 +74,6 @@ section[data-component='home'] {
       top: 0;
       left: 0;
       overflow: hidden;
-      &.bg-1 {
-        filter: blur(.25em) grayscale(100%);
-        will-change: filter;
-      }
       &.bg-2 {
         opacity: 1;
         animation: homeFadeInHalf 1s ease 1;
