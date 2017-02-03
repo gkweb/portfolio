@@ -1,0 +1,14 @@
+// components/views/email.pug
+
+doctype transitional
+html
+  head
+    meta(http-equiv = 'Content-Type', content = 'text/html; charset=UTF-8')
+    title= subject
+    body
+      h1.h1= subject
+      div
+        = message
+        h3!='From:'
+        h4
+          a(href='mailto:' + email)!=name

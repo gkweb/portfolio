@@ -69,8 +69,9 @@ app.get('/mail', function (req, res) {
       console.log(err)
       res.send('There was an error sending the email')
       return
+    } else {
+      res.send('Email Sent')
     }
-    res.send('Email Sent')
   })
 })
 
@@ -99,12 +100,28 @@ app.post('/contact', function (req, res) {
 
       res.status(201).json(r)
       return
+    } else {
+      app.mailer.send('email', {
+        to: 'gladekettle+sitemail@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.
+        subject: 'Test Email', // REQUIRED.
+        otherProperty: 'Other Property', // All additional properties are also passed to the template as local variables.
+        message: req.body.message,
+        name: req.body.name,
+        email: req.body.email
+      }, function (err) {
+        if (err) {
+          // handle error
+          console.log(err)
+          res.send('There was an error sending the email')
+          return
+        }
+      })
     }
     // Return succes state
     res.json({ success: true, message: 'Succesfully submitted, Thankyou! :)', errors: false })
   })
 })
 
-app.listen(6969, function () {
-  console.log('Example app listening on port 6969!')
+app.listen(1230, function () {
+  console.log('Example app listening on port 1230!')
 })
