@@ -5,7 +5,7 @@ let content = {
       title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
       description: 'Glade Kettle | Freelance Front End Developer based in Melbourne Australia',
       keywords: 'Javascript web developer es6 melbourne front end front-end js vanillajs SVG',
-      image: '/content/images/gk-og-img.jpg'
+      image: 'http://gladekettle.com.au/content/images/gk-og-img.jpg'
     },
     externalLinks: [
       {
@@ -164,7 +164,7 @@ let content = {
       items: [
         {
           title: 'Cochlear: Does love last forever?',
-          blurb: 'Custom front end build incorporating an interactive video hearing test. Each component was built from scratch.',
+          blurb: 'Custom front end build incorporating an interactive video hearing test. Each component was built from scratch and loosely adheres to W3C AA Accesibility standards.',
           url: '#',
           media: [
             {
