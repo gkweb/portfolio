@@ -37,6 +37,8 @@
   }
   & p {
     font-family: 'Open Sans', serif;
+    line-height: 1.3;
+    font-size: 1em;
   }
   & h3 {
     font-family: Sumana, serif;
