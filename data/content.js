@@ -191,6 +191,9 @@ let content = {
               text: 'CSS'
             },
             {
+              text: 'SVG'
+            },
+            {
               text: 'PostCSS'
             }
           ]
