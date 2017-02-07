@@ -4,7 +4,8 @@ let content = {
     meta: {
       title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
       description: 'Glade Kettle | Freelance Front End Developer based in Melbourne Australia',
-      keywords: 'Javascript web developer es6 melbourne front end front-end js vanillajs SVG'
+      keywords: 'Javascript web developer es6 melbourne front end front-end js vanillajs SVG',
+      image: '/content/images/gk-og-img.jpg'
     },
     externalLinks: [
       {
