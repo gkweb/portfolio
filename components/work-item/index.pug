@@ -4,6 +4,9 @@ mixin workItem(props)
       each m in props.media
         #{m.type}&attributes(m.attributes)
     footer
+      h3!= props.title
+      if (props.blurb)
+        p!=props.blurb
       h4!='Technologies used:'
       ul.tag-list
         each t in props.tags

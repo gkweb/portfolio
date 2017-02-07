@@ -7,6 +7,9 @@
   box-sizing: border-box;
   width: 100%;
   padding: 1em;
+  &:not(:first-child):not(:last-child) {
+    margin-bottom: 2.5em;
+  }
   & .example {
     position: relative;
     border-top: 1.5em solid #777;
@@ -32,6 +35,15 @@
       max-width: 100%;
     }
   }
+  & p {
+    font-family: 'Open Sans', serif;
+  }
+  & h3 {
+    font-family: Sumana, serif;
+    font-size: 1.5em;
+    margin: 0 0 1em;
+    color: white;
+  }
   & h4 {
     font-size: 1em;
     margin: 0 0 1em;
@@ -43,7 +55,7 @@
     list-style: none;
     & > li {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
     }
   }
   & .tag {
@@ -55,6 +67,7 @@
     box-shadow: .125em .125em .125em rgba(0, 0, 0, .5);
     &:not(:last-child) {
       margin-right: .25em;
+      margin-bottom: .5em;
     }
   }
 }

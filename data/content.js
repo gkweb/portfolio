@@ -1,6 +1,11 @@
 let content = {
   props: {
     title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
+    meta: {
+      title: 'Glade Kettle | Front end Developer based in Melbourne, Australia',
+      description: 'Glade Kettle | Freelance Front End Developer based in Melbourne Australia',
+      keywords: 'Javascript web developer es6 melbourne front end front-end js vanillajs SVG'
+    },
     externalLinks: [
       {
         attributes: {
@@ -157,20 +162,21 @@ let content = {
       title: 'Work',
       items: [
         {
-          title: 'Grampians online',
+          title: 'Cochlear: Does love last forever?',
+          blurb: 'Custom front end build incorporating interactive video hearing test',
           url: '#',
           media: [
             {
               type: 'img',
               attributes: {
-                alt: 'some alt',
-                src: 'https://www.fillmurray.com/g/500/600'
+                alt: 'Does love last forever?',
+                src: '/content/images/cochlear-1.jpg'
               }
             }
           ],
           tags: [
             {
-              text: 'ES6'
+              text: 'Jade / Pug'
             },
             {
               text: 'Javascript'
@@ -179,7 +185,47 @@ let content = {
               text: 'GIT'
             },
             {
+              text: 'CSS Next'
+            },
+            {
               text: 'CSS'
+            },
+            {
+              text: 'PostCSS'
+            }
+          ]
+        },
+        {
+          title: 'Visit Grampians',
+          blurb: 'Reskinned an already existing platform to match grampians online branding',
+          url: '#',
+          media: [
+            {
+              type: 'img',
+              attributes: {
+                alt: 'Visit grampians',
+                src: '/content/images/visit-grampians.jpg'
+              }
+            }
+          ],
+          tags: [
+            {
+              text: 'Twig'
+            },
+            {
+              text: 'Javascript'
+            },
+            {
+              text: 'jQuery'
+            },
+            {
+              text: 'GIT'
+            },
+            {
+              text: 'CSS'
+            },
+            {
+              text: 'SASS'
             }
           ]
         }

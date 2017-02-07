@@ -8,10 +8,11 @@ html
   head
     title!= props.title
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
-    meta(name="description" content="")
-    meta(property="og:title" content="")
-    meta(property="og:description" content="")
-    meta(property="og:image" content="")
+    meta(name="description" content=props.meta.description)
+    meta(name="keywords" content=props.meta.keywords)
+    meta(property="og:title" content=props.meta.title)
+    meta(property="og:description" content=props.meta.description)
+    meta(property="og:image" content=props.meta.image)
     meta(name="twitter:card" content="summary")
     meta(name="twitter:site" content="")
     link(rel="icon" href="/content/favicon.ico")
