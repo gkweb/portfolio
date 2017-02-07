@@ -1,13 +1,6 @@
-/* Featch api example
-  fetch('/contact', {
-    method: 'post'
-  }).then(function(response) {
-    console.log(response);
-  }).catch(function(err) {
-    // Error :(
-  })
-*/
-
+/**
+ * @author Glade Kettle
+ */
 export default class Contact {
   /**
    * @param {Object} options - Component options
@@ -20,8 +13,6 @@ export default class Contact {
 
     // Submit form
     this.form.addEventListener('submit', ::this.submit)
-
-    console.log(this.form)
   }
 
   /**

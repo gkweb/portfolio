@@ -164,7 +164,7 @@ let content = {
       items: [
         {
           title: 'Cochlear: Does love last forever?',
-          blurb: 'Custom front end build incorporating interactive video hearing test',
+          blurb: 'Custom front end build incorporating an interactive video hearing test. Each component was built from scratch.',
           url: '#',
           media: [
             {
@@ -181,6 +181,9 @@ let content = {
             },
             {
               text: 'Javascript'
+            },
+            {
+              text: 'HTMLMediaElement web API'
             },
             {
               text: 'GIT'
