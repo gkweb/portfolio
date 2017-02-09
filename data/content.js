@@ -166,7 +166,7 @@ let content = {
         {
           title: 'Cochlear: Does love last forever?',
           blurb: 'Custom front end build incorporating an interactive video hearing test. Each component was built from scratch and loosely adheres to W3C AA Accesibility standards.',
-          url: '#',
+          url: 'http://doeslovelastforever.com/',
           media: [
             {
               type: 'img',
@@ -205,8 +205,8 @@ let content = {
         },
         {
           title: 'Visit Grampians',
-          blurb: 'Reskinned an already existing platform to match grampians online branding',
-          url: '#',
+          blurb: 'Reskinned an already existing platform to match grampians online branding.',
+          url: 'http://www.visitgrampians.com.au/',
           media: [
             {
               type: 'img',
@@ -234,6 +234,37 @@ let content = {
             },
             {
               text: 'SASS'
+            }
+          ]
+        },
+        {
+          title: 'Radiant Returns',
+          blurb: 'Dated now but at the time this site was built to revamp the Radiant brand and give a different edge. Built contracting for TribalDDB Melbourne.',
+          url: 'http://www.radiantlaundry.com.au/',
+          media: [
+            {
+              type: 'img',
+              attributes: {
+                alt: 'Radiant return',
+                src: '/content/images/radiant-return.jpg'
+              }
+            }
+          ],
+          tags: [
+            {
+              text: 'Javascript'
+            },
+            {
+              text: 'jQuery'
+            },
+            {
+              text: 'GIT'
+            },
+            {
+              text: 'CSS'
+            },
+            {
+              text: 'LESS'
             }
           ]
         }
