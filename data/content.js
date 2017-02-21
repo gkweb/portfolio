@@ -17,7 +17,6 @@ let content = {
       }
     ],
     navigation: {
-      title: 'Some brap',
       button: {
         icon: [
           {url: '/content/symbols.svg#icon-menu'},
@@ -163,6 +162,46 @@ let content = {
     work: {
       title: 'Work',
       items: [
+        {
+          title: 'COPIA - Band website',
+          blurb: 'Custom front end build that feeds in bandsintown tour data. Each component was built from scratch.',
+          url: 'http://doeslovelastforever.com/',
+          media: [
+            {
+              type: 'img',
+              attributes: {
+                alt: 'COPIA - Band website.',
+                src: '/content/images/copia-screenshot.jpg'
+              }
+            }
+          ],
+          tags: [
+            {
+              text: 'Jade / Pug'
+            },
+            {
+              text: 'Javascript'
+            },
+            {
+              text: 'Fetch API'
+            },
+            {
+              text: 'GIT'
+            },
+            {
+              text: 'CSS Next'
+            },
+            {
+              text: 'CSS'
+            },
+            {
+              text: 'SVG'
+            },
+            {
+              text: 'PostCSS'
+            }
+          ]
+        },
         {
           title: 'Cochlear: Does love last forever?',
           blurb: 'Custom front end build incorporating an interactive video hearing test. Each component was built from scratch and loosely adheres to W3C AA Accesibility standards.',

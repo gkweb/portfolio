@@ -122,6 +122,6 @@ app.post('/contact', function (req, res) {
   })
 })
 
-app.listen(1230, function () {
-  console.log('Example app listening on port 1230!')
+app.listen(process.env.SITE_PORT, function () {
+  console.log('Example app listening on port ' + process.env.SITE_PORT)
 })
