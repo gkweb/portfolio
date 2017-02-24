@@ -165,7 +165,7 @@ let content = {
         {
           title: 'COPIA - Band website',
           blurb: 'Custom front end build that feeds in bandsintown tour data. Each component was built from scratch.',
-          url: 'http://doeslovelastforever.com/',
+          url: 'http://copiaband.com/',
           media: [
             {
               type: 'img',
@@ -178,6 +178,9 @@ let content = {
           tags: [
             {
               text: 'Jade / Pug'
+            },
+            {
+              text: 'ES6'
             },
             {
               text: 'Javascript'
@@ -227,6 +230,9 @@ let content = {
             },
             {
               text: 'GIT'
+            },
+            {
+              text: 'ES6'
             },
             {
               text: 'CSS Next'
