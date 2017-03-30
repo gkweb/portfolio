@@ -57,36 +57,28 @@ app.get('/', function (req, res) {
   res.render('app/index', content)
 })
 
-// One page app
-app.get('/mail', function (req, res) {
-  app.mailer.send('email', {
-    to: 'gladekettle@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.
-    subject: 'Test Email', // REQUIRED.
-    otherProperty: 'Other Property' // All additional properties are also passed to the template as local variables.
-  }, function (err) {
-    if (err) {
-      // handle error
-      console.log(err)
-      res.send('There was an error sending the email')
-      return
-    } else {
-      res.send('Email Sent')
-    }
-  })
-})
-
 // Contact form posts
 app.post('/contact', function (req, res) {
   console.log(req.body)
 
+  // Sanitization
+  req.sanitize('name').escape()
+  req.sanitize('name').trim()
+  req.sanitize('email').escape()
+  req.sanitize('email').trim()
+  req.sanitize('challenge').escape()
+  req.sanitize('challenge').trim()
+  req.sanitize('message').escape()
+  req.sanitize('message').trim()
+
   // Check name
-  req.checkBody('name', 'Name is a required field').isAlpha()
+  req.checkBody('name', 'Name is a required field').notEmpty()
   // Check email
   req.checkBody('email', 'Email is a required field').isEmail()
   // Check challenge
   req.checkBody('challenge', 'Challenge is a required field').isChallenge()
   // Check message
-  req.checkBody('message', 'Message is a required field').len(2, 100)
+  req.checkBody('message', 'Message is a required field').len(2, 2000)
 
   // Alternatively use `var result = yield req.getValidationResult();`
   // when using generators e.g. with co-express
@@ -103,8 +95,7 @@ app.post('/contact', function (req, res) {
     } else {
       app.mailer.send('email', {
         to: 'gladekettle+sitemail@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.
-        subject: 'Test Email', // REQUIRED.
-        otherProperty: 'Other Property', // All additional properties are also passed to the template as local variables.
+        subject: 'Website inquiry', // REQUIRED.
         message: req.body.message,
         name: req.body.name,
         email: req.body.email

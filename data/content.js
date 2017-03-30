@@ -145,7 +145,7 @@ let content = {
             placeholder: 'Your message..',
             name: 'message',
             required: 'required',
-            maxlength: 100,
+            maxlength: 2000,
             minlength: 2
           }
         },
